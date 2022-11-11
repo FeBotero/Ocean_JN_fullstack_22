@@ -125,37 +125,9 @@ app.delete("/itens/:id",async function(req,res){
 })
 
 // START Servidor 
-app.listen(port,function(){
+app.listen(process.env.PORT || port,function(){
     console.log(`Servidor rodando na porta ${port}`)
 });
 }
 
-
-
-
-
 main();
-
-
-
-// {
-//   nome:"3 Corações",
-//   tipo_de_torra:"Arabica",
-//   acidez:1,
-//   localidade:"Serra da Matiqueira",
-//   aromas:"chocolate/avelã"
-// },
-// {
-//   nome:"Kimino",
-//   tipo_de_torra:"Arabica",
-//   acidez:3,
-//   localidade:"Cerrado Mineiro",
-//   aromas:"Cravo/hortelã"
-// },
-// {
-//   nome:"Pilão",
-//   tipo_de_torra:"Arabica",
-//   acidez:4,
-//   localidade:"Fazenda Nova",
-//   aromas:"guarana"
-// },
