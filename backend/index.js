@@ -1,5 +1,5 @@
 const express = require('express');
-const { MongoClient, ObjectId, MongoInvalidArgumentError} = require("mongodb");
+const { MongoClient, ObjectId} = require("mongodb");
 
 // URL mongo local
 //const url = "mongodb://localhost:27017";
@@ -22,7 +22,7 @@ async function  main (){
 
   console.log("Banco de dados conecatado com sucesso!")
   const app = express()
-  const port = 3000
+  const port = 3001
 
 // Sinalizamos que estamos usando JSON no body
 app.use(express.json());
@@ -125,7 +125,7 @@ app.delete("/itens/:id",async function(req,res){
 })
 
 // START Servidor 
-app.listen(port,function(){
+app.listen(process.env.PORT || port,function(){
     console.log(`Servidor rodando na porta ${port}`)
 });
 }
@@ -135,27 +135,3 @@ app.listen(port,function(){
 
 
 main();
-
-
-
-// {
-//   nome:"3 Corações",
-//   tipo_de_torra:"Arabica",
-//   acidez:1,
-//   localidade:"Serra da Matiqueira",
-//   aromas:"chocolate/avelã"
-// },
-// {
-//   nome:"Kimino",
-//   tipo_de_torra:"Arabica",
-//   acidez:3,
-//   localidade:"Cerrado Mineiro",
-//   aromas:"Cravo/hortelã"
-// },
-// {
-//   nome:"Pilão",
-//   tipo_de_torra:"Arabica",
-//   acidez:4,
-//   localidade:"Fazenda Nova",
-//   aromas:"guarana"
-// },
