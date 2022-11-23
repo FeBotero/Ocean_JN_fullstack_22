@@ -1,0 +1,9 @@
+.ReadAll{
+    margin-top: 2rem;
+    display: flex;
+    gap:2rem;
+    justify-content: space-between;
+    /* serve para quebrar a exibição dos itens para outra linha */
+    flex-wrap: wrap;
+
+}

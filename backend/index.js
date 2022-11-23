@@ -1,5 +1,6 @@
 const express = require('express');
 const { MongoClient, ObjectId} = require("mongodb");
+const cors = require('cors')
 
 // URL mongo local
 //const url = "mongodb://localhost:27017";
@@ -27,7 +28,7 @@ async function  main (){
 // Sinalizamos que estamos usando JSON no body
 app.use(express.json());
 
-
+app.use(cors())
 // Endpoint principal
 app.get('/', function (req, res) {
   res.send(`Servidor rodando na porta ${port}`)
