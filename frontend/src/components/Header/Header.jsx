@@ -1,14 +1,15 @@
 import brand from "../../assets/brand.svg"
 import "./Header.css"
+import {Link} from "react-router-dom"
 
 
 function Header(){
     return(
         <div className="Header">
-            <a href="/"><img src={brand} alt="Logo Zap" /></a>
+            <Link href="/"><img src={brand} alt="Logo Zap" /></Link>
             
-            <a href="/create">Adicionar</a>
-            <a href="/">Listar</a>
+            <Link href="/create">Adicionar</Link>
+            <Link href="/">Listar</Link>
             
         </div>
     )
