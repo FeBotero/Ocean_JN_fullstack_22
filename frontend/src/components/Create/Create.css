@@ -1,0 +1,32 @@
+.Create{
+    margin: 0.2rem;
+    
+
+}
+.Create div{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    margin-top: 0.2rem;
+    font-weight: bold;
+    
+}
+.Create  input{
+    border-radius: 0.4rem;
+    height: 2rem;
+    border: 1px solid #eeeeee
+    
+    
+}
+.Create input[type=submit]{
+    cursor: pointer;
+    height: 2.5rem;
+    font-size: medium;
+    font-weight: bold;
+    color:white;
+    background: #008010;
+    border-radius: 0.4rem;
+}
+.Create input[type=submit]:hover{
+    opacity: 0.8;
+}

@@ -1,8 +1,6 @@
 .ReadAll{
-    margin-top: 2rem;
     display: flex;
-    gap:2rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* serve para quebrar a exibição dos itens para outra linha */
     flex-wrap: wrap;
 

@@ -8,7 +8,7 @@ function Header(){
             <a href="/"><img src={brand} alt="Logo Zap" /></a>
             
             <a href="/create">Adicionar</a>
-            <a href="#">Listar</a>
+            <a href="/">Listar</a>
             
         </div>
     )

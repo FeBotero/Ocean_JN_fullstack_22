@@ -89,7 +89,7 @@ app.post("/itens",async function (req,res){
   await collection.insertOne(item);
 
   // Exibimos uma mensagem de sucesso
-  res.send("Item criado com sucesso");
+  res.send({message:"Item criado com sucesso!"});
 })
 
 // Endpoint [UPDATE] /itens/:id  - UPDATE BY ID (Atualizada pelo ID)
@@ -107,7 +107,7 @@ app.put("/itens/:id",async function (req,res){
  )
   
   // Mensagem de alteração com sucesso
-  res.send("Item atualziado com sucesso!")
+  res.send({message:"Item atualziado com sucesso!"})
 
 })
 
@@ -121,7 +121,7 @@ app.delete("/itens/:id",async function(req,res){
   })
   
   // Mensagem de sucesso de exclusão
-  res.send("PRoduto removido com sucesso!")
+  res.send({message:"Produto removido com sucesso!"})
 
 })
 
