@@ -10,15 +10,15 @@ export const Api = {
         readAll:function(){
             return this.endpoint() + "/" ;
         },
-        readById:function(){
+        readById:function(id){
             return this.endpoint + "/" + id;
         },     
         create: function(){
             return this.endpoint() + "/"
         
         },
-        delete: function(){
-            return this.endpoint() + "/" + id
+        delete: function(id){
+            return this.endpoint() + "/" + id;
         }
     },
 

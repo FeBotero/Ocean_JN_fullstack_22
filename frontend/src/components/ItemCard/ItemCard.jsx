@@ -8,17 +8,18 @@ import {useNavigate} from "react-router-dom"
 
 function ItemCard(props){
     const item = props.item
-    if(!confirm("Tem certeza que deseja excluir esse item?")){
-        return;
-    }
+      
 
     const navigate = useNavigate()
     
     async function excluirItem(){
+        if(!confirm("Tem certeza que deseja excluir esse item?")){
+            return;
+        } 
         
         const deleteUrl = Api.itens.delete(item._id);
         const response = await Api.buildApiDeleteRequest(deleteUrl);
-        const body = await response.json()
+        const body = await response.json();
 
         if(response.status ===200){
             alert(body.message);
@@ -31,7 +32,7 @@ function ItemCard(props){
     
     return(
         <div className="ItemCard">
-            <FontAwesomeIcon onClick={excluirItem()} className="icon-delete"icon={faTrashCan} />
+            <FontAwesomeIcon onClick={excluirItem} className="icon-delete"icon={faTrashCan} />
             
 
             <h1>{item.nome}</h1>
