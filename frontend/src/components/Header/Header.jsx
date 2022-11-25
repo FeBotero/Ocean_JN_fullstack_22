@@ -6,10 +6,13 @@ import {Link} from "react-router-dom"
 function Header(){
     return(
         <div className="Header">
-            <Link href="/"><img src={brand} alt="Logo Zap" /></Link>
-            
-            <Link href="/create">Adicionar</Link>
-            <Link href="/">Listar</Link>
+            <Link to="/">
+        <img src={Brand} width={32} height={32} alt="Samsung Ocean Logo" />
+      </Link>
+
+      <Link to="/">Listar</Link>
+
+      <Link to="/adicionar">Adicionar</Link>
             
         </div>
     )
