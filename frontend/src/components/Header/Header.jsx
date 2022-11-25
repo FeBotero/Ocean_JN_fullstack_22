@@ -12,7 +12,7 @@ function Header(){
 
       <Link to="/">Listar</Link>
 
-      <Link to="/adicionar">Adicionar</Link>
+      <Link to="/create">Adicionar</Link>
             
         </div>
     )
