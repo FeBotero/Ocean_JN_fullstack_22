@@ -20,6 +20,7 @@ import { useEffect } from "react"
             const resultado = await response.json();
             
             setItens(resultado);
+            console.log(itens)
             
             }
             useEffect(function(){
@@ -37,9 +38,9 @@ import { useEffect } from "react"
         <div className="ReadAll">
             
             {itens.map(function (item, index){
-                return <ItemCard item={item} key={`item-card-${index}`}/>
+                return <ItemCard itemCard={item} key={`item-card-${index}`}/>
             })}
-            
+            {console.log(itens)}
 
         </div>
     )

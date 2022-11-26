@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom"
 
 
 function ItemCard(props){
-    const item = props.item
+    const itens = props.itemCard
       
 
     const navigate = useNavigate()
@@ -17,7 +17,7 @@ function ItemCard(props){
             return;
         } 
         
-        const deleteUrl = Api.itens.delete(item._id);
+        const deleteUrl = Api.itens.delete(itens._id);
         const response = await Api.buildApiDeleteRequest(deleteUrl);
         const body = await response.json();
 
@@ -35,8 +35,8 @@ function ItemCard(props){
             <FontAwesomeIcon onClick={excluirItem} className="icon-delete"icon={faTrashCan} />
             
 
-            <h1>{item.nome}</h1>
-            <img src={item.imgUrl} alt={"Imagem do " + item.nome} width="200px"max-height="200px" />
+            <h1>{itens.nome}</h1>
+            <img src={itens.imgUrl} alt={"Imagem do " + itens.nome} width="200px"max-height="200px" />
         </div>
     )
 }

@@ -1,6 +1,8 @@
+
+
 export const Api = {
-    baseUrl:"http://localhost:3001/",
-    // baseUrl:"https://ocean-jn-fullstack-22fb.onrender.com/",
+    // baseUrl:"http://localhost:3001/",
+    baseUrl:"https://ocean-jn-fullstack-22fb.onrender.com/",
 
     // Endpoints de itens
     itens:{
@@ -8,7 +10,7 @@ export const Api = {
             return Api.baseUrl + "itens";
         },
         readAll:function(){
-            return this.endpoint() + "/" ;
+            return this.endpoint() + "/"
         },
         readById:function(id){
             return this.endpoint + "/" + id;
@@ -18,6 +20,9 @@ export const Api = {
         
         },
         delete: function(id){
+            return this.endpoint() + "/" + id;
+        },
+        update: function(id){
             return this.endpoint() + "/" + id;
         }
     },
